@@ -1,0 +1,36 @@
+  #-------------------------------
+  # Reusable schemas (data models)
+  #-------------------------------
+components:
+  schemas:
+    firstName:
+      type: string
+    lastName:
+      type: string
+    User:             # Can be referenced as '#/components/schemas/User'
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+    Person:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        lineAddress:
+          type: string
+    UserName:
+      type: object
+      properties:
+        name:
+          type: string
+          description: calculated by 'GenericComponents.yaml#/components/schemas/firstName' and 'GenericComponents.yaml#/components/schemas/lastName'
+          $ref:
+            anyOf:
+              - 'GenericComponents.yaml#/components/schemas/firstName'
+              - 'GenericComponents.yaml#/components/schemas/lastName'

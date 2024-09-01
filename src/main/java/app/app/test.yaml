@@ -1,0 +1,64 @@
+components:
+  schemas:
+    stringTest:
+      type: string
+      $ref:
+        anyOf:
+          - 'GenericComponents.yaml#/components/schemas/firstName'
+          - 'GenericComponents.yaml#/components/schemas/lastName'
+    firstName:
+      type: string
+    lastName:
+      type: string
+    numbersMock:
+      type: object
+      properties:
+        smallInt:
+          type: integer
+          format: int32
+        bigInt:
+          type: integer
+          format: int64
+        unsafeInt:
+          type: integer
+          format: unsafe
+        notInt:
+          type: number
+    stringsMock:
+      type: object
+      properties:
+        isoDate:
+          type: string
+          format: date
+        isoDateTime:
+          type: string
+          format: date-time
+    objectsMock:
+      type: object
+      properties:
+        child:
+          type: object
+          properties:
+            child:
+              type: boolean
+        childList:
+          type: array
+          items:
+            type: object
+            properties:
+              child:
+                type: boolean
+        childMatrix:
+          type: array
+          items:
+            type: object
+            properties:
+              0:
+                type: object
+                properties:
+                  child:
+                    type: boolean
+        nullable:
+          type: string
+          format: nullable
+
