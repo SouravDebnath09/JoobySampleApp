@@ -1,0 +1,438 @@
+{
+    "modelName": "",
+    "collections": [
+        {
+            "collectionName": "get",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "parameters",
+                    "hackoladeMeta": {
+                        "disableAdd": false,
+                        "disableDelete": false,
+                        "disableAppend": true,
+                        "resetInsteadOfDelete": true,
+                        "disableChoices": true
+                    },
+                    "isActivated": true,
+                    "structureType": true,
+                    "schemeType": "apiKey",
+                    "required": false,
+                    "properties": [],
+                    "primaryKey": false,
+                    "additionalItems": true,
+                    "uniqueItems": false,
+                    "subtype": "anyParameter",
+                    "nullable": false,
+                    "childType": "array",
+                    "type": "array",
+                    "GUID": "ef03bf44-5f1d-42cf-9d33-64a609a7d5f1"
+                },
+                {
+                    "name": "callbacks",
+                    "hackoladeMeta": {
+                        "disableAdd": false,
+                        "disableDelete": false,
+                        "disableAppend": true,
+                        "resetInsteadOfDelete": true,
+                        "disableChoices": true
+                    },
+                    "isActivated": true,
+                    "schemeType": "apiKey",
+                    "required": false,
+                    "ignore_z_value": true,
+                    "additionalProperties": false,
+                    "structureType": true,
+                    "properties": [],
+                    "childType": "operationObject",
+                    "type": "document",
+                    "subtype": "callback",
+                    "GUID": "a894857f-a2b0-4cf2-9203-dc1cc61d0e62"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "f078fc3b-a03c-49f2-ac7e-fa8aa61c4dfe"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "entityType": "request",
+            "subtype": "requestBody",
+            "GUID": "ca02c496-82ac-4830-bd9c-3b4a99e2e4f8",
+            "servers": [],
+            "id": "/id",
+            "scopesExtensions": [],
+            "operationId": "hvhjvj",
+            "externalDocs": {
+                "GUID": "6afc9748-b288-49e8-9dd8-fad45ebab0c1",
+                "externalDocsUrl": "/vhvhu"
+            }
+        }
+    ],
+    "buckets": [],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "b9e79745-2671-4081-960f-80935fb8e637": "schemas",
+        "e61e1bac-f07a-4274-91d3-961aa2342eaa": "responses",
+        "7506be16-e754-4bd1-961b-273f1f47d250": "parameters",
+        "8ca8a764-c31e-4780-a600-2f2128ab198d": "examples",
+        "a7b4a34c-bb24-42bc-8902-d41b42003098": "requestBodies",
+        "845326bf-0ce2-4d68-b888-b66206a5daa3": "headers",
+        "c82b0284-a931-4805-ad0f-6b8a89aa003d": "securitySchemes",
+        "aaca57a2-68f1-43b9-bcce-7a79f327ee54": "links",
+        "e0a90ab2-9dc8-4c64-9523-66d5075125e4": "callbacks",
+        "6378069e-3745-4750-9d8e-c718e9409a65": "Specification Extensions",
+        "9c769435-96f3-47ee-a329-75547197ee8b": "Account",
+        "73270e5d-3ea4-4a49-a7d8-8ff35f1a29c4": "Age",
+        "ef03bf44-5f1d-42cf-9d33-64a609a7d5f1": "parameters",
+        "a894857f-a2b0-4cf2-9203-dc1cc61d0e62": "callbacks",
+        "ca02c496-82ac-4830-bd9c-3b4a99e2e4f8": "get"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [
+            {
+                "name": "schemas",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true,
+                    "source": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [
+                    {
+                        "hackoladeMeta": {
+                            "disableDelete": false,
+                            "disableAppend": false,
+                            "resetInsteadOfDelete": false,
+                            "displayNameFromField": false
+                        },
+                        "isActivated": true,
+                        "schemeType": "apiKey",
+                        "required": false,
+                        "primaryKey": false,
+                        "nullable": false,
+                        "type": "string",
+                        "GUID": "9c769435-96f3-47ee-a329-75547197ee8b",
+                        "name": "Account",
+                        "error": {
+                            "name": false
+                        }
+                    },
+                    {
+                        "name": "Age",
+                        "hackoladeMeta": {
+                            "disableDelete": false,
+                            "disableAppend": false,
+                            "resetInsteadOfDelete": false,
+                            "displayNameFromField": false
+                        },
+                        "isActivated": true,
+                        "schemeType": "apiKey",
+                        "required": false,
+                        "primaryKey": false,
+                        "nullable": false,
+                        "childType": "integer",
+                        "type": "numeric",
+                        "GUID": "73270e5d-3ea4-4a49-a7d8-8ff35f1a29c4",
+                        "error": {}
+                    }
+                ],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "schema",
+                "GUID": "b9e79745-2671-4081-960f-80935fb8e637",
+                "definitionRefs": []
+            },
+            {
+                "name": "responses",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "response",
+                "GUID": "e61e1bac-f07a-4274-91d3-961aa2342eaa",
+                "definitionRefs": []
+            },
+            {
+                "name": "parameters",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "structureType": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "anyParameter",
+                "GUID": "7506be16-e754-4bd1-961b-273f1f47d250",
+                "definitionRefs": []
+            },
+            {
+                "name": "examples",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "example",
+                "GUID": "8ca8a764-c31e-4780-a600-2f2128ab198d",
+                "definitionRefs": []
+            },
+            {
+                "name": "requestBodies",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "request",
+                "GUID": "a7b4a34c-bb24-42bc-8902-d41b42003098",
+                "definitionRefs": []
+            },
+            {
+                "name": "headers",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "header",
+                "GUID": "845326bf-0ce2-4d68-b888-b66206a5daa3",
+                "definitionRefs": []
+            },
+            {
+                "name": "securitySchemes",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "securityScheme",
+                "GUID": "c82b0284-a931-4805-ad0f-6b8a89aa003d",
+                "definitionRefs": []
+            },
+            {
+                "name": "links",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "link",
+                "GUID": "aaca57a2-68f1-43b9-bcce-7a79f327ee54",
+                "definitionRefs": []
+            },
+            {
+                "name": "callbacks",
+                "hackoladeMeta": {
+                    "disableAdd": false,
+                    "disableDelete": true,
+                    "disableAppend": true,
+                    "disableChoices": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "additionalProperties": false,
+                "structureType": true,
+                "properties": [],
+                "childType": "componentObject",
+                "type": "document",
+                "subtype": "callback",
+                "GUID": "e0a90ab2-9dc8-4c64-9523-66d5075125e4",
+                "definitionRefs": []
+            },
+            {
+                "name": "Specification Extensions",
+                "hackoladeMeta": {
+                    "disableAdd": true,
+                    "disableReference": true,
+                    "disableDelete": true,
+                    "disableAppend": true
+                },
+                "isActivated": true,
+                "schemeType": "apiKey",
+                "required": false,
+                "ignore_z_value": true,
+                "structureType": true,
+                "subtype": "snippetChildrenOnly",
+                "additionalProperties": false,
+                "childType": "extensions",
+                "type": "document",
+                "GUID": "6378069e-3745-4750-9d8e-c718e9409a65",
+                "definitionRefs": []
+            }
+        ],
+        "GUID": "f8f71e40-c171-4b56-810d-0edccd1d722f"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "3c2282a4-6e90-4023-8425-4c6c1cb90e15"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "4ed70fc6-49b6-452c-8516-eee660dbd710"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "3.0.3",
+    "dbVendor": "OpenAPI",
+    "appTarget": "OPENAPI",
+    "creationTS": "2024-08-31T19:55:18.625Z",
+    "GUID": "0ad0dabe-a7e4-40de-8d1d-7540e44fbe6e",
+    "isLineageEnabled": false,
+    "hackoladeMeta": {
+        "namingConvention": "",
+        "validationErrors": {}
+    },
+    "lastModifTS": "2024-08-31T20:19:03.210Z",
+    "persistenceSchemaVersion": "7",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginName": "OpenAPI",
+        "pluginVersion": "0.2.1",
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "7.7.6"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "ca02c496-82ac-4830-bd9c-3b4a99e2e4f8",
+                        "x": 999,
+                        "y": 1169,
+                        "width": 186,
+                        "height": 69,
+                        "color": {
+                            "hex": "#9c28b1"
+                        }
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [
+                        "0ad0dabe-a7e4-40de-8d1d-7540e44fbe6e",
+                        "f8f71e40-c171-4b56-810d-0edccd1d722f",
+                        "b9e79745-2671-4081-960f-80935fb8e637"
+                    ],
+                    "entities": [],
+                    "decorativeSymbols": [],
+                    "displayOptions": {}
+                },
+                "buckets": [],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "vertical",
+                "options": [],
+                "relationshipUpdateDisabled": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

@@ -1,0 +1,88 @@
+components:
+  schemas:
+    account_user_role:
+      type: string
+    Processor:
+      type: object
+      additionalProperties:
+        type: object
+        properties:
+          has_customer_object:
+            type: boolean
+          has_transaction_history:
+            type: boolean
+          name:
+            type: string
+            $ref:
+              allOf:
+                - 'GenericComponents.yaml#/components/schemas/firstName'
+                - 'GenericComponents.yaml#/components/schemas/lastName'
+
+
+    Account:
+      type: object
+      properties:
+        account_user_role:
+          $ref: '#/components/schemas/account_user_role'
+        account_user_id:
+          type: string
+        processor:
+          $ref: '#/components/schemas/Processor'
+        account_id:
+          type: string
+        is_most_recent_expired_subscription_gratis:
+          type: boolean
+        has_previously_paid_subscription:
+          type: boolean
+
+    Entitlement:
+      type: object
+      properties:
+        subscription_id:
+          type: string
+        has_active_subscription:
+          type: boolean
+        subscription_plan:
+          type: string
+        expires_at:
+          type: string
+          format: date-time
+
+    LastActiveSubscription:
+      type: object
+      properties:
+        subscription_id:
+          type: string
+        purchase_origin_platform:
+          type: string
+        will_renew:
+          type: boolean
+
+    Default:
+      type: object
+      properties:
+        account:
+          $ref: '#/components/schemas/Account'
+        features:
+          type: array
+          items:
+            type: string
+        entitlement:
+          $ref: '#/components/schemas/Entitlement'
+        last_active_subscription:
+          $ref: '#/components/schemas/LastActiveSubscription'
+
+    Accounts:
+      type: object
+      properties:
+        default:
+          $ref: '#/components/schemas/Default'
+
+    ApiResponse:
+      type: object
+      properties:
+        accounts:
+          $ref: '#/components/schemas/Accounts'
+        temp_ap_available_at:
+          type: string
+          format: date-time
